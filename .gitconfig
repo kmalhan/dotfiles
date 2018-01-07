@@ -1,0 +1,37 @@
+[user]
+	name = Kazumi Malhan
+	email = [email]
+[alias]
+				# Display all aliases
+	aliass   = !git config --get-regexp alias
+				# Display history with file changed
+	graph    = log --decorate --graph --name-status --oneline
+	diff     = diff --color | diff-so-fancy
+				# Display hisotry just commits
+	lg       = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+				# Display status and stash list
+	stat     = !"git stash list && git status --short --branch"
+	st       = status --short --branch
+	ad       = add -p
+				# Pull but using rebase
+	purr     = pull --rebase
+				# Interactive rebase
+	ibase    = !sh -c 'git rebase -i $(git merge-base ${1:-master} HEAD)' -
+	unstage  = reset HEAD --
+	cancel   = reset --soft HEAD^
+	wdiff    = diff --word-diff --ignore-all-space
+	
+	
+[gui]
+	diffopts = -w
+
+[merge]
+	tool = kdiff3
+[mergetool "kdiff3"]
+	prompt = false
+	trustExitCode = false
+[diff]
+	guitool = kdiff3
+[difftool "kdiff3"]
+	prompt = false
+	trustExitCode = false
