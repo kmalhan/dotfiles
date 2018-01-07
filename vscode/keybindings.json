@@ -1,0 +1,144 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    {
+        "key": "ctrl+u ctrl+i",
+        "command": "editor.action.goToImplementation",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+u ctrl+d",
+        "command": "editor.action.goToDeclaration",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+u ctrl+g",
+        "command": "workbench.action.findInFiles",
+        "when": "!searchInputBoxFocus"
+    },
+    {
+        "key": "ctrl+w ctrl+h",
+        "command": "workbench.action.focusPreviousGroup",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+w h",
+        "command": "workbench.action.focusSideBar",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+w ctrl+l",
+        "command": "workbench.action.navigateEditorGroups",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+w ctrl+l",
+        "command": "workbench.action.focusFirstEditorGroup",
+        "when": "!editorFocus"
+    },
+    {
+        "key": "ctrl+w ctrl+l",
+        "command": "workbench.action.nextEditor",
+        "when": "editorFocus && vim.mode == 'Normal'"
+    },
+    //エディターのテキストにフォーカスしている時のコマンドinsert modeでctrl + lを押すとカーソルが移動
+    {
+        "key": "ctrl+l",
+        "command": "cursorRight",
+        "when": "editorTextFocus && !editorReadOnly"
+    },
+    //候補系のkeybinding
+    {
+        "key": "ctrl+k",
+        "command": "acceptSelectedSuggestion"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "selectNextSuggestion",
+        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "selectPrevSuggestion",
+        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "settings.action.focusSettingsFile",
+        "when": "inSettingsSearch"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "showNextParameterHint",
+        "when": "editorTextFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "keybindings.editor.focusKeybindings",
+        "when": "inKeybindings && inKeybindingsSearch"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "list.focusDown",
+        "when": "listFocus"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "list.focusUp",
+        "when": "listFocus"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "search.focus.nextInputBox",
+        "when": "inputBoxFocus && searchViewletVisible"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "settings.action.clearSearchResults",
+        "when": "inSettingsSearch"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "keybindings.editor.clearSearchResults",
+        "when": "inKeybindings && inKeybindingsSearch"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "search.action.cancel",
+        "when": "listFocus && searchViewletVisible"
+    },
+    //コマンドパレットオープン
+    {
+        "key": "ctrl+o ctrl+o",
+        "command": "workbench.action.showCommands"
+    },
+    {
+        "key": "ctrl+o o",
+        "command": "workbench.action.showCommands"
+    },
+    {
+        "key": "ctrl+alt+p",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+u ctrl+f",
+        "command": "actions.find"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-actions.find"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "extension.vim_ctrl+w",
+        "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-extension.vim_ctrl+w",
+        "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
+    }
+]
